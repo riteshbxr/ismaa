@@ -186,6 +186,43 @@ document.addEventListener('DOMContentLoaded', function() {
         alert(`${memberName}\nPosition: ${position}\n\nFor more details, please contact the Secretary.`);
     };
     
+    // Resource download functions
+    window.downloadAll = function() {
+        const resources = [
+            'resources/newsletters/june24.pdf',
+            'resources/documents/ISMAA Certificate.jpg',
+            'resources/documents/certificate.jpeg',
+            'resources/documents/ISMAA Bengaluru Chapter Members.pdf'
+        ];
+        
+        if (confirm('This will download all available resources. Continue?')) {
+            resources.forEach((url, index) => {
+                setTimeout(() => {
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = url.split('/').pop();
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }, index * 500); // Stagger downloads by 500ms
+            });
+            
+            alert('Download started! All resources will be downloaded to your default download folder.');
+        }
+    };
+    
+    // Track download clicks
+    window.trackDownload = function(filename) {
+        console.log(`Download tracked: ${filename}`);
+        // Here you could send analytics data if needed
+    };
+    
+    // Resource view tracking
+    window.trackView = function(filename) {
+        console.log(`View tracked: ${filename}`);
+        // Here you could send analytics data if needed
+    };
+    
 });
 
 // Additional utility functions

@@ -15,9 +15,29 @@ This website serves as the central hub for ISM alumni in Bengaluru, providing in
 ## Features
 
 ### 🏠 Homepage
-- Modern, responsive design
-- Hero section with alumni association branding
+- Modern, responsive design with authentic ISM Dhanbad official logo
+- Hero section with floating logo animation and Sanskrit motto
+- Professional branding consistent with ISM heritage
 - Quick navigation to all sections
+
+### ℹ️ About Section
+- Official ISM logo with gear design (established 1926)
+- Information about Indian School of Mines (IIT ISM), Dhanbad
+- Sanskrit motto: "अतिष्ठ जागत प्राप्त वरान्निबोधत" (Rise, Awake and Achieve Excellence)
+- Institute history and achievements spanning 99+ years
+- Mission and vision statements
+- Overview of ISMAA Bengaluru Chapter
+
+### 🎯 Objectives Section
+- Complete list of organizational objectives
+- Seven core objectives with detailed descriptions:
+  1. **Alumni Networking** - Forum for Bangalore-based alumni connections
+  2. **Institute Connection** - Strong bond with ISM/IIT chapters
+  3. **Professional Development** - Lectures, seminars, and knowledge sharing
+  4. **Entrepreneurship Support** - Mentorship for alumni entrepreneurs
+  5. **Community Welfare** - Member support and volunteering activities
+  6. **Student Support** - Assistance for needy students at the institute
+  7. **Philanthropic Activities** - Community service initiatives
 
 ### 👥 Committee Information
 - Complete list of office bearers for 2025-26
@@ -30,7 +50,18 @@ This website serves as the central hub for ISM alumni in Bengaluru, providing in
 - Volunteer recruitment information
 - Event updates
 
-### 📄 Newsletter Section
+### � Resources & Downloads
+- **Comprehensive Resource Library** with organized categories:
+  - **Newsletters** - Monthly and quarterly publications
+  - **Documents** - Official certificates, updates, and administrative files
+  - **Souvenirs** - Commemorative items and memorabilia collections
+  - **Photos** - Event galleries and member photos (coming soon)
+- **Direct Download Links** with view and download options for each file
+- **Browsable Directories** with individual index pages for each category
+- **Batch Download** functionality to download all resources at once
+- **Access Control** information for committee members to upload new content
+
+### �📄 Newsletter Section
 - Direct access to latest newsletters
 - Archive of past publications
 - Subscription functionality for verified alumni
@@ -68,11 +99,31 @@ ismaa/
 ├── assets/
 │   ├── css/
 │   │   └── custom.css      # Additional styling
-│   └── js/
-│       └── main.js         # Enhanced functionality
-├── newsletter/
-│   └── june24.pdf          # Newsletter archive
-├── otherDocs/              # Supporting documents
+│   ├── js/
+│   │   └── main.js         # Enhanced functionality
+│   └── images/
+│       ├── ism-official-logo.png    # Official ISM logo (standard)
+│       ├── ism-official-logo-hq.png # Official ISM logo (high quality)
+│       └── IIT_(ISM)_Dhanbad_Logo.svg.png # IIT ISM variant
+├── resources/              # Resource repository
+│   ├── index.html          # Resources main page
+│   ├── newsletters/        # Newsletter archive
+│   │   ├── index.html      # Newsletters browser
+│   │   └── june24.pdf      # June 2024 newsletter
+│   ├── documents/          # Official documents
+│   │   ├── index.html      # Documents browser
+│   │   ├── ISMAA Certificate.jpg
+│   │   ├── from whatsapp.txt
+│   │   └── objectives.jpeg
+│   ├── souvenirs/          # Commemorative items
+│   │   ├── index.html      # Souvenirs browser
+│   │   ├── ISMAAB Souvenir 1.docx
+│   │   ├── ismaab souvenir 2.docx
+│   │   └── Message to editor_designer.docx
+│   └── photos/             # Event photos (coming soon)
+├── newsletter/             # Legacy newsletter folder
+│   └── june24.pdf          # Original newsletter location
+├── otherDocs/              # Source documents
 └── README.md               # This file
 ```
 

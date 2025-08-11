@@ -11,9 +11,20 @@
 - Mission statement
 - Vision statement
 - History of ISMAA Bengaluru Chapter
-- Core values and objectives
+- Core values and organizational overview
 
-### 3. Committee Section (`/#committee`)
+### 3. Objectives Section (`/#objectives`)
+- **Seven Core Objectives:**
+  1. **Alumni Networking** - Forum for Bangalore-based alumni to connect
+  2. **Institute Connection** - Foster strong bonds with ISM/IIT chapters
+  3. **Professional Development** - Lectures, debates, seminars on diverse topics
+  4. **Entrepreneurship Support** - Mentorship for alumni entrepreneurs
+  5. **Community Welfare** - Member support and volunteering activities
+  6. **Student Support** - Assistance for needy students at the institute
+  7. **Philanthropic Activities** - Community service and social initiatives
+- Commitment statement and organizational philosophy
+
+### 4. Committee Section (`/#committee`)
 - **Leadership Team 2025-26**
   - President: Mr V Sethuram
   - Vice-President: Mr Ashish Narayan

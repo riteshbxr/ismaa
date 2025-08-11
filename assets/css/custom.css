@@ -1,5 +1,265 @@
 /* Additional Custom Styles for ISMAA Website */
 
+/* Logo styling */
+.navbar-logo {
+    height: 35px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+}
+
+.navbar-text {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.hero-logo {
+    text-align: center;
+    opacity: 0.95;
+}
+
+/* Photo Gallery Enhancements */
+.photo-gallery-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-gallery-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.photo-gallery-card:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.photo-gallery-card .card-img-top {
+    transition: all 0.4s ease;
+    filter: brightness(0.9);
+}
+
+.photo-gallery-card:hover .card-img-top {
+    transform: scale(1.1);
+    filter: brightness(1);
+}
+
+.photo-overlay {
+    background: linear-gradient(45deg, rgba(26, 35, 126, 0.8), rgba(63, 81, 181, 0.8));
+    backdrop-filter: blur(2px);
+    transition: all 0.4s ease;
+}
+
+.photo-gallery-card .card-body {
+    position: relative;
+    z-index: 2;
+    background: white;
+}
+
+.photo-gallery-card .card-title {
+    color: #1a237e;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* Photo Gallery Button Enhancement */
+.btn-custom {
+    background: linear-gradient(135deg, #1a237e, #3f51b5);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(26, 35, 126, 0.3);
+}
+
+.btn-custom:hover {
+    background: linear-gradient(135deg, #3f51b5, #1a237e);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(26, 35, 126, 0.4);
+}
+
+/* Responsive Photo Gallery */
+@media (max-width: 768px) {
+    .photo-gallery-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .photo-gallery-card .card-img-top {
+        height: 250px;
+    }
+}
+
+.hero-logo-img {
+    height: 140px;
+    width: auto;
+    filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,255,255,0.3));
+    animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-10px) scale(1.02); }
+}
+
+.footer-logo {
+    height: 55px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+/* About section logo */
+.about-logo {
+    height: 100px;
+    width: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.1));
+}
+
+/* Resources section styling */
+.resource-card {
+    border: none;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+.resource-card .card-header {
+    background: var(--gradient);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-weight: 600;
+}
+
+.resource-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.resource-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.resource-item:last-child {
+    border-bottom: none;
+}
+
+.resource-item:hover {
+    background-color: #f8f9fa;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
+.resource-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.resource-actions .btn {
+    border-radius: 20px;
+    font-size: 0.85rem;
+    padding: 5px 12px;
+    transition: all 0.3s ease;
+}
+
+.resource-actions .btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Resource download animation */
+.downloading {
+    animation: downloadPulse 1s infinite;
+}
+
+@keyframes downloadPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Folder browser styling */
+.folder-browser {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.folder-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.folder-item:hover {
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.folder-item i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Objectives section styling */
+.objective-item {
+    padding: 20px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--accent-color);
+}
+
+.objective-item:hover {
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.objective-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(26, 35, 126, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+}
+
+.objective-content h5 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.objective-content p {
+    margin-bottom: 0;
+    line-height: 1.6;
+    color: #555;
+}
+
 /* Enhanced animations */
 .fade-in-up {
     opacity: 0;
@@ -46,6 +306,24 @@
 }
 
 /* Responsive improvements */
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 30px;
+    }
+    
+    .hero-logo-img {
+        height: 80px;
+    }
+    
+    .footer-logo {
+        height: 40px;
+    }
+    
+    .navbar-text {
+        font-size: 1.2rem;
+    }
+}
+
 @media (max-width: 576px) {
     .hero-title {
         font-size: 2rem;
@@ -63,6 +341,33 @@
         width: 60px;
         height: 60px;
         font-size: 1.5rem;
+    }
+    
+    .objective-item {
+        padding: 15px;
+    }
+    
+    .objective-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        margin-right: 10px;
+    }
+    
+    .objective-content h5 {
+        font-size: 1rem;
+    }
+    
+    .navbar-logo {
+        height: 25px;
+    }
+    
+    .hero-logo-img {
+        height: 60px;
+    }
+    
+    .footer-logo {
+        height: 35px;
     }
 }
 
@@ -82,5 +387,17 @@
     .card {
         box-shadow: none !important;
         border: 1px solid #ddd !important;
+    }
+    
+    .objective-item {
+        background: white !important;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+    
+    .navbar-logo,
+    .hero-logo-img,
+    .footer-logo {
+        filter: none !important;
     }
 }

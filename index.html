@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISMAA Bengaluru Chapter</title>
+    <title>ISMAA Bengaluru Chapter - Indian School of Mines Alumni Association</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <meta name="description" content="ISMAA Bengaluru Chapter - Connecting ISM/IIT ISM Dhanbad alumni in Bangalore. Join our community for networking, professional development, and meaningful connections.">
+    <meta name="keywords" content="ISM, IIT ISM, Dhanbad, Alumni, Bengaluru, Bangalore, Indian School of Mines, ISMAA, Alumni Association">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
     <style>
         :root {
             --primary-color: #1a237e;
@@ -189,6 +193,32 @@
             color: var(--accent-color) !important;
         }
         
+        /* Photo Gallery Styles */
+        .photo-gallery-card {
+            overflow: hidden;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .photo-gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .photo-gallery-card .card-img-top {
+            transition: transform 0.3s ease;
+        }
+        
+        .photo-gallery-card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        
+        .photo-overlay {
+            background: rgba(0,0,0,0.4);
+            transition: opacity 0.3s ease;
+        }
+        
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2.5rem;
@@ -218,7 +248,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
         <div class="container">
             <a class="navbar-brand" href="#home">
-                <i class="fas fa-graduation-cap me-2"></i>ISMAA Bengaluru
+                <img src="assets/images/logo-transparent.png" alt="ISM Dhanbad Official Logo" class="navbar-logo me-2">
+                <span class="navbar-text">ISMAA Bengaluru</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -227,8 +258,11 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#objectives">Objectives</a></li>
                     <li class="nav-item"><a class="nav-link" href="#committee">Committee</a></li>
                     <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#photos">Photos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
                     <li class="nav-item"><a class="nav-link" href="#newsletter">Newsletter</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -239,9 +273,12 @@
     <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="container hero-content">
+            <div class="hero-logo mb-4">
+                <img src="assets/images/logo.png" alt="ISM Dhanbad Official Logo" class="hero-logo-img">
+            </div>
             <h1 class="hero-title animate-fade-in">Indian School of Mines</h1>
             <h2 class="hero-subtitle animate-fade-in">Alumni Association - Bengaluru Chapter</h2>
-            <p class="lead mb-4 animate-fade-in">Connecting ISM Alumni across Bengaluru</p>
+            <p class="lead mb-4 animate-fade-in">अतिष्ठ जागत प्राप्त वरान्निबोधत - Rise, Awake and Achieve Excellence</p>
             <a href="#about" class="btn btn-custom btn-lg animate-fade-in">
                 <i class="fas fa-arrow-down me-2"></i>Learn More
             </a>
@@ -252,6 +289,40 @@
     <section id="about" class="py-5">
         <div class="container">
             <h2 class="section-title">About ISMAA Bengaluru</h2>
+            
+            <!-- About ISM Institute -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <img src="assets/images/logo.png" alt="ISM Dhanbad Official Logo" class="about-logo mb-3">
+                            <h3 class="mb-3">Indian School of Mines (IIT ISM), Dhanbad</h3>
+                            <p class="lead mb-3"><em>"अतिष्ठ जागत प्राप्त वरान्निबोधत"</em> - Rise, Awake and Achieve Excellence</p>
+                            <p class="lead mb-3">Established in 1926, the Indian School of Mines is one of India's premier technical institutions.</p>
+                            <p>Originally founded as the Indian School of Mines to cater to the mining industry, it has evolved into IIT ISM Dhanbad, offering world-class education in engineering, technology, and management. The institution has produced thousands of successful alumni who have made significant contributions across various industries globally.</p>
+                            <div class="row mt-4">
+                                <div class="col-md-3 mb-3">
+                                    <h5><i class="fas fa-calendar-alt text-primary me-2"></i>Established</h5>
+                                    <p class="mb-0">1926</p>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <h5><i class="fas fa-map-marker-alt text-primary me-2"></i>Location</h5>
+                                    <p class="mb-0">Dhanbad, Jharkhand</p>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <h5><i class="fas fa-star text-primary me-2"></i>Status</h5>
+                                    <p class="mb-0">IIT since 2016</p>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <h5><i class="fas fa-award text-primary me-2"></i>Legacy</h5>
+                                    <p class="mb-0">99+ Years</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="row">
                 <div class="col-lg-6 mb-4">
                     <div class="card h-100">
@@ -272,6 +343,131 @@
                             </div>
                             <h4>Our Vision</h4>
                             <p>To be the premier alumni network in Bengaluru, facilitating knowledge exchange, mentorship opportunities, and collaborative initiatives that benefit both our members and the broader community.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objectives Section -->
+    <section id="objectives" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Our Objectives</h2>
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="text-center">
+                        <p class="lead">The ISMAA Bengaluru Chapter is established with the following core objectives to serve our alumni community and contribute to society:</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="objective-item">
+                        <div class="d-flex align-items-start">
+                            <div class="objective-icon">
+                                <i class="fas fa-network-wired text-primary"></i>
+                            </div>
+                            <div class="objective-content">
+                                <h5>Alumni Networking</h5>
+                                <p>To provide a forum for Bangalore based Alumni to connect with each other and foster strong relationships within our community.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="objective-item">
+                        <div class="d-flex align-items-start">
+                            <div class="objective-icon">
+                                <i class="fas fa-university text-primary"></i>
+                            </div>
+                            <div class="objective-content">
+                                <h5>Institute Connection</h5>
+                                <p>To foster a strong bond with the Institute and offer support to ISM/IIT chapters across different locations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="objective-item">
+                        <div class="d-flex align-items-start">
+                            <div class="objective-icon">
+                                <i class="fas fa-chalkboard-teacher text-primary"></i>
+                            </div>
+                            <div class="objective-content">
+                                <h5>Professional Development</h5>
+                                <p>To provide professional networking among alumni by organizing lectures, debates, seminars and conducting sessions on diverse topics of expertise.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="objective-item">
+                        <div class="d-flex align-items-start">
+                            <div class="objective-icon">
+                                <i class="fas fa-lightbulb text-primary"></i>
+                            </div>
+                            <div class="objective-content">
+                                <h5>Entrepreneurship Support</h5>
+                                <p>To guide and mentor Bangalore based Alumni entrepreneurs in their pursuit of creating valuable products and services pertaining to their area of expertise.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="objective-item">
+                        <div class="d-flex align-items-start">
+                            <div class="objective-icon">
+                                <i class="fas fa-heart text-primary"></i>
+                            </div>
+                            <div class="objective-content">
+                                <h5>Community Welfare</h5>
+                                <p>To promote friendship and welfare amongst the members and to provide funding through contributions by members for volunteering activities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="objective-item">
+                        <div class="d-flex align-items-start">
+                            <div class="objective-icon">
+                                <i class="fas fa-graduation-cap text-primary"></i>
+                            </div>
+                            <div class="objective-content">
+                                <h5>Student Support</h5>
+                                <p>To help needy students of all communities at the Institute to pursue their studies through various support mechanisms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 mb-4">
+                    <div class="objective-item">
+                        <div class="d-flex align-items-start">
+                            <div class="objective-icon">
+                                <i class="fas fa-hands-helping text-primary"></i>
+                            </div>
+                            <div class="objective-content">
+                                <h5>Philanthropic Activities</h5>
+                                <p>To engage and assist in philanthropic activities as may be deemed appropriate by the Governing Body of the society, contributing to the broader community welfare.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="mb-3"><i class="fas fa-quote-left text-primary me-2"></i>Our Commitment</h4>
+                            <p class="lead mb-0">Through these objectives, ISMAA Bengaluru Chapter strives to create a lasting impact on our alumni community, the institute, and society at large. We believe in the power of collective effort and shared values to achieve meaningful progress.</p>
                         </div>
                     </div>
                 </div>
@@ -422,7 +618,7 @@
                             <li>Santokh Singh (Provisional)</li>
                             <li>Anubhav</li>
                             <li>Chaudhary</li>
-                            <li>Chandan Sharma (Confirmation pending)</li>
+                            <li>Chandan Sharma</li>
                         </ul>
                     </div>
                 </div>
@@ -444,6 +640,214 @@
         </div>
     </section>
 
+    <!-- Resources Section -->
+    <section id="resources" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Resources & Downloads</h2>
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <p class="lead">Access and download important documents, newsletters, and photos from ISMAA Bengaluru Chapter</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Newsletters -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card resource-card h-100">
+                        <div class="card-header">
+                            <h4><i class="fas fa-newspaper text-primary me-2"></i>Newsletters</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted mb-3">Download our latest newsletters and publications</p>
+                            <div class="resource-list">
+                                <div class="resource-item">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">June 2024 Newsletter</h6>
+                                            <small class="text-muted">Latest edition with alumni updates</small>
+                                        </div>
+                                        <div class="resource-actions">
+                                            <a href="resources/newsletters/june24.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">
+                                                <i class="fas fa-eye"></i> View
+                                            </a>
+                                            <a href="resources/newsletters/june24.pdf" download class="btn btn-sm btn-primary">
+                                                <i class="fas fa-download"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documents -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card resource-card h-100">
+                        <div class="card-header">
+                            <h4><i class="fas fa-file-alt text-success me-2"></i>Documents</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted mb-3">Important documents and certificates</p>
+                            <div class="resource-list">
+                                <div class="resource-item">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">ISMAA Certificate</h6>
+                                            <small class="text-muted">Official association certificate</small>
+                                        </div>
+                                        <div class="resource-actions">
+                                            <a href="resources/documents/ISMAA Certificate.jpg" target="_blank" class="btn btn-sm btn-outline-success me-1">
+                                                <i class="fas fa-eye"></i> View
+                                            </a>
+                                            <a href="resources/documents/ISMAA Certificate.jpg" download class="btn btn-sm btn-success">
+                                                <i class="fas fa-download"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="resource-item">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">Member Directory</h6>
+                                            <small class="text-muted">ISMAA Bengaluru Chapter Members Directory</small>
+                                        </div>
+                                        <div class="resource-actions">
+                                            <a href="resources/documents/ISMAA Bengaluru Chapter Members.pdf" target="_blank" class="btn btn-sm btn-outline-success me-1">
+                                                <i class="fas fa-eye"></i> View
+                                            </a>
+                                            <a href="resources/documents/ISMAA Bengaluru Chapter Members.pdf" download class="btn btn-sm btn-success">
+                                                <i class="fas fa-download"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="resource-item">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">Additional Certificate</h6>
+                                            <small class="text-muted">Certificate document</small>
+                                        </div>
+                                        <div class="resource-actions">
+                                            <a href="resources/documents/certificate.jpeg" target="_blank" class="btn btn-sm btn-outline-success me-1">
+                                                <i class="fas fa-eye"></i> View
+                                            </a>
+                                            <a href="resources/documents/certificate.jpeg" download class="btn btn-sm btn-success">
+                                                <i class="fas fa-download"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Access -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card resource-card h-100">
+                        <div class="card-header">
+                            <h4><i class="fas fa-bolt text-info me-2"></i>Quick Access</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted mb-3">Frequently accessed resources</p>
+                            <div class="d-grid gap-2">
+                                <a href="resources/newsletters/" target="_blank" class="btn btn-outline-primary">
+                                    <i class="fas fa-folder-open me-2"></i>Browse All Newsletters
+                                </a>
+                                <a href="resources/documents/" target="_blank" class="btn btn-outline-success">
+                                    <i class="fas fa-folder-open me-2"></i>Browse All Documents
+                                </a>
+                                <a href="resources/photos/" target="_blank" class="btn btn-outline-info">
+                                    <i class="fas fa-folder-open me-2"></i>Browse All Photos
+                                </a>
+                                <button class="btn btn-outline-info" onclick="alert('Please visit individual resource sections to download specific files.')">
+                                    <i class="fas fa-download me-2"></i>Download All Resources
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upload Section for Committee Members -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4><i class="fas fa-upload text-primary me-2"></i>For Committee Members</h4>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="text-muted mb-3">Committee members can upload new resources by contacting the Secretary</p>
+                            <p><strong>Contact:</strong> Mr. Sanjib Ghosh (Secretary) for adding new documents, newsletters, or photos</p>
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="fas fa-envelope me-2"></i>Contact Secretary
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="photos" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Photo Gallery</h2>
+            <p class="text-center text-muted mb-5">Capturing memorable moments from our events and gatherings</p>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card photo-gallery-card h-100" onclick="window.open('resources/photos/', '_blank')">
+                        <div class="position-relative">
+                            <img src="resources/photos/ISMAA Meet July 25/SVB_9246.JPG" 
+                                 alt="ISMAA Meet July 2025" 
+                                 class="card-img-top" 
+                                 style="height: 300px; object-fit: cover;">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center photo-overlay"
+                                 style="opacity: 0;"
+                                 onmouseover="this.style.opacity='1'"
+                                 onmouseout="this.style.opacity='0'">
+                                <i class="fas fa-expand text-white" style="font-size: 2rem;"></i>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">ISMAA Meet July 2025</h5>
+                            <p class="card-text text-muted">Latest chapter gathering and fellowship</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card photo-gallery-card h-100" onclick="window.open('resources/photos/', '_blank')">
+                        <div class="position-relative">
+                            <img src="resources/photos/ISMAA Meet July 25/SVB_9425.JPG" 
+                                 alt="ISMAA Meet July 2025" 
+                                 class="card-img-top" 
+                                 style="height: 300px; object-fit: cover;">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center photo-overlay"
+                                 style="opacity: 0;"
+                                 onmouseover="this.style.opacity='1'"
+                                 onmouseout="this.style.opacity='0'">
+                                <i class="fas fa-expand text-white" style="font-size: 2rem;"></i>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Community Bonding</h5>
+                            <p class="card-text text-muted">ISMAA July 2025 meeting moments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="resources/photos/" class="btn btn-custom btn-lg">
+                    <i class="fas fa-images me-2"></i>View Full Gallery
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Newsletter Section -->
     <section id="newsletter" class="py-5 bg-light">
         <div class="container">
@@ -457,7 +861,7 @@
                             </div>
                             <h4>Latest Newsletter</h4>
                             <p>Stay updated with our latest newsletter featuring alumni stories, events, and achievements.</p>
-                            <a href="newsletter/june24.pdf" target="_blank" class="btn btn-custom">
+                            <a href="resources/newsletters/june24.pdf" target="_blank" class="btn btn-custom">
                                 <i class="fas fa-download me-2"></i>Download June 2024 Newsletter
                             </a>
                         </div>
@@ -467,13 +871,13 @@
                     <div class="card">
                         <div class="card-body text-center">
                             <div class="icon-box">
-                                <i class="fas fa-gift"></i>
+                                <i class="fas fa-images"></i>
                             </div>
-                            <h4>Souvenirs & Memories</h4>
-                            <p>Explore our collection of ISMAA Bengaluru souvenirs and memorable moments from our events.</p>
-                            <button class="btn btn-custom" onclick="alert('Souvenir catalog coming soon!')">
-                                <i class="fas fa-eye me-2"></i>View Collection
-                            </button>
+                            <h4>Photo Gallery</h4>
+                            <p>Explore our collection of photos from ISMAA Bengaluru Chapter events and memorable moments.</p>
+                            <a href="resources/photos/" class="btn btn-custom">
+                                <i class="fas fa-images me-2"></i>View Gallery
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -508,12 +912,12 @@
                                 <h5><i class="fas fa-share-alt text-primary me-2"></i>Stay Connected</h5>
                                 <p class="text-muted">Join our WhatsApp group for regular updates and networking opportunities.</p>
                                 <div class="d-flex justify-content-center gap-3">
-                                    <a href="#" class="btn btn-outline-primary">
+                                    <button onclick="alert('WhatsApp group link will be shared via email to verified alumni members.')" class="btn btn-outline-primary">
                                         <i class="fab fa-whatsapp me-2"></i>WhatsApp Group
-                                    </a>
-                                    <a href="#" class="btn btn-outline-primary">
+                                    </button>
+                                    <button onclick="alert('Please contact Secretary Sanjib Ghosh for email list subscription.')" class="btn btn-outline-primary">
                                         <i class="fas fa-envelope me-2"></i>Email List
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -528,14 +932,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <h5><i class="fas fa-graduation-cap me-2"></i>ISMAA Bengaluru Chapter</h5>
-                    <p>Indian School of Mines Alumni Association - Connecting minds, building futures.</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="assets/images/logo.png" alt="ISM Official Logo" class="footer-logo me-3">
+                        <div>
+                            <h5 class="mb-1">ISMAA Bengaluru Chapter</h5>
+                            <p class="mb-0 small">Indian School of Mines Alumni Association</p>
+                            <p class="mb-0 small"><em>अतिष्ठ जागत प्राप्त वरान्निबोधत</em></p>
+                        </div>
+                    </div>
+                    <p>Connecting minds, building futures through our alumni network.</p>
                 </div>
                 <div class="col-lg-6 text-lg-end">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#about">About Us</a></li>
+                        <li><a href="#objectives">Objectives</a></li>
                         <li><a href="#committee">Committee</a></li>
+                        <li><a href="#resources">Resources</a></li>
                         <li><a href="#newsletter">Newsletter</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>

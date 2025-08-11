@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Stories - ISMAA Bengaluru Chapter</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <meta name="description" content="Alumni Stories from ISM/IIT ISM Dhanbad graduates - Memories, experiences, and inspiring journeys from our beloved ISM alumni community.">
+    <meta name="keywords" content="ISM, IIT ISM, Dhanbad, Alumni, Stories, Memories, Experiences, ISMAA, Bengaluru">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a237e;
+            --secondary-color: #3f51b5;
+            --accent-color: #ff6b35;
+            --text-light: #f5f5f5;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding-top: 76px; /* Account for fixed navbar */
+        }
+        
+        .navbar-custom {
+            background: var(--gradient);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+        }
+        
+        .navbar-logo {
+            height: 40px;
+            width: auto;
+        }
+        
+        .navbar-text {
+            color: white;
+        }
+        
+        .nav-link {
+            color: rgba(255,255,255,0.9) !important;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+        
+        .story-card {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .story-intro {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .story-highlight {
+            background: linear-gradient(135deg, #f8f9ff, #e8f2ff);
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .story-section h6 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .story-wisdom {
+            background: linear-gradient(135deg, #fff8f0, #ffeedd);
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .story-conclusion {
+            font-style: italic;
+            color: #666;
+            font-size: 1.05rem;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 2px solid #eee;
+        }
+        
+        .btn-custom {
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(26, 35, 126, 0.4);
+            color: white;
+        }
+        
+        .page-header {
+            background: var(--gradient);
+            color: white;
+            padding: 4rem 0 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem 0 1rem;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo-transparent.png" alt="ISM Dhanbad Official Logo" class="navbar-logo me-2">
+                <span class="navbar-text">ISMAA Bengaluru</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#objectives">Objectives</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#committee">Committee</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#news">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#resources">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="stories.html">Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#photos">Photos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#newsletter">Newsletter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-book-open me-3"></i>Alumni Stories</h1>
+            <p>Memories, experiences, and inspiring journeys from our beloved ISM alumni community</p>
+        </div>
+    </div>
+
+    <!-- Alumni Stories Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card story-card">
+                        <div class="card-header">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h4 class="mb-1"><i class="fas fa-book-open text-primary me-2"></i>Down Memory Lane – Initiation</h4>
+                                    <p class="mb-0 text-muted"><strong>A K Ojha – 1965 (Mining)</strong></p>
+                                </div>
+                                <span class="badge bg-primary">Class of 1965</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="story-content">
+                                <p class="story-intro"><em>"Are you enjoying the snow flakes at Simla?"</em></p>
+                                
+                                <div class="story-text">
+                                    <p>I could not answer this simple question. I was not enjoying. I was sweating profusely. I could not see any sign of snow flakes anywhere outside; nor was its absence unexpected. I was several hundred kilometres away from Simla. But I was supposed to be at Simla and was expected to behave that way. The group so much bothered for my enjoyment was unlikely to take my straight answer kindly. My predecessor is presently relaxing in 'murga' pose in the corner for his refusal to endorse whatever the group had said.</p>
+
+                                    <p>Perhaps, I should explain. This was the first Sunday of July, 1961. The School was to open next day. I was standing on the top slab of a wall rack trying to stick my neck out through the ventilator of an Upper Barracks hostel room. I and some other Freshers have been summoned to this room to be introduced to 'seniors'. My background of having passed out from Rama Krishna Mission Vidya Mandir drew loud sneers from the seniors. It was unanimously decided that I was a fit case for Simla visit.</p>
+
+                                    <div class="story-highlight">
+                                        <p><strong>The Simla Visit:</strong> Some one asked me to climb up the wall rack and sweetly explained that I could see Simla through the ventilator. Having no courage to decline the invitation, I hoisted myself up and looked outside. Sensing the mood of the Group, I meekly replied in the affirmative to their query about Simla. I hardly suspected that the innocent prank of imagine-you-are-at-Simla was only the introduction of the more sinister phase.</p>
+                                    </div>
+
+                                    <p>"Peep out and you can see a beautiful young lady in her birthday suit. Please describe her". Oh, God! How to reply? A sixteen year old lad with R K Mission culture does not know how to satisfy the jeering seniors without offending his own sensibility and avoid doing a 'murga'. He did what he had learnt. Pray for getting him out of this trouble. The prayer was immediately answered. One of the popular seniors, Dilip Mukherjee (Kanu to his innumerable friends), who developed some fancy for me and had assumed the role of my local guardian, stepped in as my saviour.</p>
+
+                                    <div class="story-section">
+                                        <h6><i class="fas fa-map-marker-alt text-primary me-2"></i>The Arrival</h6>
+                                        <p>I had no idea of ragging till the rickshaw puller taking me from the bus stand to the School did a bit of marketing. He advised me not to worry much about ragging and take his rickshaw any time in the night to the Railway Station. Apparently, during the mass ragging and some other nights, many first year students fled to the safety of station platforms.</p>
+                                    </div>
+
+                                    <p>We lived a fearful lot in the first few days. Always scared that some senior would come and demand something, there would be a rush to the toilets when there was some noise indicating a group entering Tank Shop. It is only at the School building that we felt protected, knowing fully well that seniors can not do anything other than passing some instructions like 'see me at Room no. 230 precisely at 05 47 this evening'.</p>
+
+                                    <div class="story-section">
+                                        <h6><i class="fas fa-user text-primary me-2"></i>The Moustache Incident</h6>
+                                        <p>We had with us Raj Kumar Khurja, - quite older than me, having worked for a few years as an Instructor in an UP college. He was very fair and handsome. A lovingly nurtured sparkling handlebar moustache added glamour to his impressive personality. Seniors caught hold of him and made him shave off one side. They threatened him of dire consequences in case he shaved the other half within a week.</p>
+                                        
+                                        <p>So what could poor Raj Kumar do other than shedding silent tears for his departed whiskers? He started moving everywhere covering his face, nose southwards, with a big handkerchief. One evening he suddenly came across Prof Prasad. The Director was taking his routine rounds to curb ragging in the hostels.</p>
+                                    </div>
+
+                                    <div class="story-highlight">
+                                        <p><strong>Prof. Prasad's Intervention:</strong> A very generous heart, Prof Prasad was touched by Raj Kumar's plight. He thought that the boy had caught severe cold and advised him to go to Dr. Col. Mitra and take medicines before it complicates. When he discovered the truth, he simply said: "Go, and shave the other half. And, this is MY instruction."</p>
+                                    </div>
+
+                                    <div class="story-section">
+                                        <h6><i class="fas fa-running text-primary me-2"></i>The Great Escape</h6>
+                                        <p>I was very uneasy and nervous. On my first day in the classes six seniors asked me separately to their rooms exactly at 06 10 PM. The rooms were in different hostels. Naturally, I did not go anywhere. By 06 15 all six descended to the hostel and demanded my explanation for disobeying. It was drizzling. They asked me to run to Upper Barracks hostel and come back in TWO minutes.</p>
+                                        
+                                        <p>I had no option but to start running. A little ahead I spotted the comforting sight of a cycle rickshaw. I hailed it and went straight to a relative's house in the colony. He was an Instructor in Physics Dept. I told him that I would leave the School and go to take admission in Physics Hons. in the Presidency College, Calcutta.</p>
+                                    </div>
+
+                                    <div class="story-wisdom">
+                                        <p><strong>Words of Wisdom:</strong> Mr. Upadhyaya, my relative, simply told, "Everyone will think that you ran away since you could not cope with pressure of Mining course. It never serves to run away from a problem rather than facing it. These seniors are good boys. They may be playing prank, but they wish you well."</p>
+                                    </div>
+
+                                    <p class="story-conclusion">As the days passed I found out that most of the seniors were very cooperative and always available for guidance. Whether it was understanding of some course material or finding out the best way to run away from the last class to reach the Tennis Court early without the Professor coming to know of it, there were experts. They took some small remuneration like getting some reports done by us, but we never grudged them. We knew that in a year's time, we shall have some 'murgas' doing these for us!</p>
+                                </div>
+                            </div>
+                            
+                            <div class="story-footer mt-4 pt-3 border-top">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <small class="text-muted">
+                                            <i class="fas fa-calendar me-1"></i>Era: 1961 • 
+                                            <i class="fas fa-graduation-cap me-1"></i>Mining Engineering • 
+                                            <i class="fas fa-map-marker-alt me-1"></i>ISM Dhanbad
+                                        </small>
+                                    </div>
+                                    <div class="col-md-4 text-md-end">
+                                        <button class="btn btn-outline-primary btn-sm" onclick="shareStory('down-memory-lane')">
+                                            <i class="fas fa-share me-1"></i>Share Story
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Story -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card story-card">
+                        <div class="card-header">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h4 class="mb-1"><i class="fas fa-home text-primary me-2"></i>Down Memory Lane – Hostel Life</h4>
+                                    <p class="mb-0 text-muted"><strong>A K Ojha – 1965 (Mining)</strong></p>
+                                </div>
+                                <span class="badge bg-primary">Class of 1965</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="story-content">
+                                <p class="story-intro"><em>"It was an old military warehouse used during the Second World War..."</em></p>
+                                
+                                <div class="story-text">
+                                    <div class="story-section">
+                                        <h6><i class="fas fa-building text-primary me-2"></i>Tank-shop Hostel</h6>
+                                        <p>It was an old military warehouse used during the Second World War. The structure was built keeping in mind the strength required to frustrate pilferers and not for any aesthetic beauty. It was therefore no surprise that Tank-shop Hostel, - that was the current name, stood out like an eyesore over an otherwise pleasing landscape.</p>
+                                        
+                                        <p>The community could not forget the beating one thief had received when he, totally ignorant of the natural urge of first year students to do heroics in front of neighbourhood girls, entered a house nearby. The frightened householder raised an alarm and almost immediately a score of Tank-shop inmates descended on the scene, fished out the miscreant and gave him a thorough bashing in typical Shammi Kapoor style!</p>
+                                    </div>
+
+                                    <div class="story-highlight">
+                                        <p><strong>The Living Arrangement:</strong> Tank-shop hostel was a huge structure with asbestos sheet roof, as big as all our workshop sheds combined. About one hundred students were housed in large cubicles created with six-feet high walls, - three in a room. There was no difficulty in visiting your class friends' room and raid his locker when there is nobody in the room provided you were athletic and comfortable walking over a single-brick wall.</p>
+                                    </div>
+
+                                    <p>My room mates were Baladev Bhattacharya, and Sunil Sarkar. We three studied together in Belur Vidya Mandira. Sunil, incidentally, was a master of diplomacy. Baladev and I would have opposite views on most of the things (Shammi Kapoor films were one of the few exceptions). Sunil, a couple of years older than us, would take the mediator's chair, walk on tight rope and bring the two opposing views closer. We gave him the sobriquet of 'U Thant' after the then Secretary General of UNO.</p>
+
+                                    <div class="story-section">
+                                        <h6><i class="fas fa-volume-up text-primary me-2"></i>The Cacophony</h6>
+                                        <p>The hostel was, for all practical purposes, a large hall and there was nothing like privacy. Some serious students were upset that they could not study as they wished. Someone or other of the 100 heads will have the urge for singing or abusing someone else practically all the time.</p>
+                                        
+                                        <p>On a typical day, the inmates would return to the rooms after completing various outdoor activities and then, a sort of competition for hurling the choicest filthy invectives would begin. This would normally start between two friends in the adjoining rooms calling each other CGPP and such other things, and gradually joined by about a dozen or more voices from different corners.</p>
+                                        
+                                        <p class="text-muted"><em>It was unanimously agreed that Punjabi was very rich in expletives and all of us quickly learnt a few abuses in that language!</em></p>
+                                    </div>
+
+                                    <div class="story-highlight">
+                                        <p><strong>The Characters:</strong> We had hostel mates varying in specifications of 43 kg weight with 86 Decibel voice (S K Agarwal, who served NMDC for life and retired as its Chairman) and 86 kg weight with 43 Dbl. voice (Mohan Khaitan, who worked with Coal India). They were the star players in our evening cacophony competitions!</p>
+                                    </div>
+
+                                    <div class="story-section">
+                                        <h6><i class="fas fa-utensils text-primary me-2"></i>Mess Life & The Meat Day</h6>
+                                        <p>The food was tolerable without being good. The thing I remember most about the mess is the clamour for earning the attention of the Principal mess servant, Surindar on the day meat was on the menu. Four meat pieces of about 10 mm size would be served to everyone with one piece of 20-30 mm potato. One could request for extra gravy but nothing more. However, we suspected that a few smart boarders who were in good books of Surindar used to get pieces of meat or potato submerged in gravy!</p>
+                                    </div>
+
+                                    <div class="story-section">
+                                        <h6><i class="fas fa-user-tie text-primary me-2"></i>Sunil's Mess Management Adventures</h6>
+                                        <p>We became members of the Bengalee Mess in second year. Poor Sunil, ignorant of the internal equations was all enthusiasm as he took up his position as mess manager. Half of the boarders used to be broke by about tenth day after receipt of scholarship money and would practice acute cost control measures for the rest of the month.</p>
+                                        
+                                        <div class="story-wisdom">
+                                            <p><strong>The Sunday Incident:</strong> A lanky coal-supply man blocked our way demanding Rs. 30 from Sunil. Our diplomatic friend regained his composure and admonished the creditor: "Don't you know that this is a Sunday and my day off? Call on me on a working day." The poor man was perplexed. He saluted and moved away.</p>
+                                        </div>
+                                        
+                                        <p>But some others were not as obliging. Sunil started leaving the hostel well before 07:00 AM, mumbling something about early rising being good for health. We soon discovered the real reason - creditors were waiting for him! The milkman with thick handlebar mustache would knock looking for 'Sarkar Saab'. One day, he laid his towel on the verandah and sat down declaring that he would sit there till Sarkar Saab recovered and paid his dues!</p>
+                                    </div>
+
+                                    <div class="story-section">
+                                        <h6><i class="fas fa-building text-primary me-2"></i>The Hostel Journey</h6>
+                                        <p>We moved to the Old Hostel in our third year with double seated accommodations. The principal advantage was 10 minutes extra sleeping time. The Common Room was bigger, TT tables better - quite a change from the rickety tables we had in the Barracks.</p>
+                                        
+                                        <p>We were the first occupants of the New Hostel which was ready just before we moved to the final year. This was a modern building with much shine and polish and we liked it.</p>
+                                    </div>
+
+                                    <div class="story-section">
+                                        <h6><i class="fas fa-cookie-bite text-primary me-2"></i>The Great Sandesh Challenge</h6>
+                                        <p>A N Kheto came into money one Sunday - Rs. 10 returned by a debtor after three years! He offered that if somebody could eat sweets worth Rs. 10 in one sitting, he would fund the project. In case of failure, the competitor was to pay for the sweets.</p>
+                                        
+                                        <p>Now, sweets had been principal of my many weaknesses. Ten rupees could buy a lot of sweets those days. I took up the challenge. We ordered 40 pieces of Chitta Ranjan sandesh. The journey was delightful at first, tolerable for a while thereafter and outright torturous after mid point.</p>
+                                        
+                                        <div class="story-highlight">
+                                            <p><strong>The Strategy:</strong> Compelled to continue, I put my sharp mischievous brain to work. I suggested that it was very uncivil of me to devour the delicious sandesh all alone and offered some pieces to the audience. Before Kheto-da could protest, everyone picked up one/two pieces!</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="story-wisdom">
+                                        <p><strong>The Legend Lives On:</strong> Years later, while preparing for exams, a student approached me for an aloo paratha competition. When I declined citing my limit of four parathas, he gave a disbelieving smile: "Why, Sir, you ate 200 sandesh in one sitting at Hirapur!" I realized how a mole is made a mountain over the years through hearsay and gossip!</p>
+                                    </div>
+
+                                    <p class="story-conclusion">Life in Tank-shop hostel was quite enjoyable, filled with characters, challenges, and unforgettable moments that shaped us into who we became. The bonds formed in those cramped quarters and the lessons learned from everyday survival became the foundation of lifelong friendships and memories.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="story-footer mt-4 pt-3 border-top">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <small class="text-muted">
+                                            <i class="fas fa-calendar me-1"></i>Era: 1961-1965 • 
+                                            <i class="fas fa-graduation-cap me-1"></i>Mining Engineering • 
+                                            <i class="fas fa-home me-1"></i>Tank-shop → Old Hostel → New Hostel
+                                        </small>
+                                    </div>
+                                    <div class="col-md-4 text-md-end">
+                                        <button class="btn btn-outline-primary btn-sm" onclick="shareStory('hostel-life-memories')">
+                                            <i class="fas fa-share me-1"></i>Share Story
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action for More Stories -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5><i class="fas fa-pen text-primary me-2"></i>Share Your Story</h5>
+                            <p class="text-muted mb-3">Do you have memorable experiences from your ISM days? We'd love to feature your story!</p>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <a href="index.html#contact" class="btn btn-primary">
+                                    <i class="fas fa-envelope me-2"></i>Submit Your Story
+                                </a>
+                                <button class="btn btn-outline-primary" onclick="alert('More alumni stories will be added soon. Please check back regularly!')">
+                                    <i class="fas fa-book me-2"></i>Read More Stories
+                                </button>
+                            </div>
+                            <p class="small text-muted mt-3">Stories can be about hostel life, academics, friendships, achievements, or any memorable moment from ISM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Home -->
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <a href="index.html" class="btn btn-custom btn-lg">
+                        <i class="fas fa-home me-2"></i>Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h5>ISMAA Bengaluru Chapter</h5>
+                    <p>Connecting ISM/IIT ISM Dhanbad alumni in Bangalore</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <p>&copy; 2025 ISMAA Bengaluru Chapter. All rights reserved.</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <p class="mb-0">"अतिष्ठ जागत प्राप्त वरान्निबोधत" - Rise, Awake and Achieve Excellence</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a href="index.html" class="text-white me-3">Home</a>
+                    <a href="stories.html" class="text-white me-3">Stories</a>
+                    <a href="index.html#contact" class="text-white">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Share Story Function
+        function shareStory(storyId) {
+            const url = window.location.href + '#' + storyId;
+            const title = 'Check out this amazing ISM Alumni Story';
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: title,
+                    text: 'Read this inspiring story from an ISM alumnus',
+                    url: url
+                }).catch(console.error);
+            } else {
+                // Fallback: Copy to clipboard
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('Story link copied to clipboard!');
+                }).catch(() => {
+                    alert('Share URL: ' + url);
+                });
+            }
+        }
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all story cards
+        document.querySelectorAll('.story-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

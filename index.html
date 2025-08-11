@@ -241,6 +241,80 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* Alumni Stories Styles */
+        .story-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .story-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .story-intro {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--secondary-color);
+            border-left: 3px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .story-text p {
+            text-align: justify;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .story-highlight {
+            background: linear-gradient(45deg, rgba(63, 81, 181, 0.05), rgba(255, 107, 53, 0.05));
+            border-left: 3px solid var(--secondary-color);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .story-section {
+            margin: 25px 0;
+            padding: 15px;
+            background: rgba(245, 245, 245, 0.7);
+            border-radius: 8px;
+        }
+
+        .story-section h6 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .story-wisdom {
+            background: linear-gradient(135deg, rgba(26, 35, 126, 0.05), rgba(63, 81, 181, 0.05));
+            border: 1px solid rgba(26, 35, 126, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .story-wisdom p {
+            margin: 0;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .story-conclusion {
+            font-size: 1.05rem;
+            color: var(--primary-color);
+            background: rgba(255, 107, 53, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .story-footer {
+            background: rgba(248, 249, 250, 0.8);
+        }
     </style>
 </head>
 <body>
@@ -261,8 +335,9 @@
                     <li class="nav-item"><a class="nav-link" href="#objectives">Objectives</a></li>
                     <li class="nav-item"><a class="nav-link" href="#committee">Committee</a></li>
                     <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#photos">Photos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stories.html">Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#photos">Photos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#newsletter">Newsletter</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -949,6 +1024,7 @@
                         <li><a href="#objectives">Objectives</a></li>
                         <li><a href="#committee">Committee</a></li>
                         <li><a href="#resources">Resources</a></li>
+                        <li><a href="#stories">Alumni Stories</a></li>
                         <li><a href="#newsletter">Newsletter</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -1014,6 +1090,51 @@
             el.style.transition = 'all 0.6s ease';
             observer.observe(el);
         });
+
+        // Share Story Function
+        function shareStory(storyId) {
+            const storyUrl = window.location.href + '#stories';
+            let storyTitle, storyDescription;
+            
+            if (storyId === 'down-memory-lane') {
+                storyTitle = 'Alumni Story: Down Memory Lane - Initiation';
+                storyDescription = 'Read this fascinating story from an ISM alumni about the initiation days in 1961';
+            } else if (storyId === 'hostel-life-memories') {
+                storyTitle = 'Alumni Story: Down Memory Lane - Hostel Life';
+                storyDescription = 'Discover the colorful hostel life at ISM in the 1960s, from Tank-shop to New Hostel';
+            } else {
+                storyTitle = 'ISM Alumni Stories';
+                storyDescription = 'Read amazing stories from ISM alumni about their memorable experiences';
+            }
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: storyTitle,
+                    text: storyDescription,
+                    url: storyUrl
+                }).catch(console.error);
+            } else {
+                // Fallback for browsers that don't support Web Share API
+                const shareText = `Check out this amazing alumni story: "${storyTitle}" - ${storyUrl}`;
+                
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(shareText).then(() => {
+                        alert('Story link copied to clipboard! Share it with fellow alumni.');
+                    }).catch(() => {
+                        // Fallback if clipboard API fails
+                        const textArea = document.createElement('textarea');
+                        textArea.value = shareText;
+                        document.body.appendChild(textArea);
+                        textArea.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(textArea);
+                        alert('Story link copied to clipboard! Share it with fellow alumni.');
+                    });
+                } else {
+                    alert(`Share this story:\n\n${shareText}`);
+                }
+            }
+        }
     </script>
 </body>
 </html>

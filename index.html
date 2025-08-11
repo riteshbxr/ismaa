@@ -219,6 +219,33 @@
             transition: opacity 0.3s ease;
         }
         
+        /* Story Preview Card Styles */
+        .story-preview-card {
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .story-preview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .story-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(26, 35, 126, 0.1);
+            border-radius: 8px;
+        }
+        
+        .story-icon i {
+            font-size: 1.2rem;
+        }
+        
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2.5rem;
@@ -333,11 +360,11 @@
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#objectives">Objectives</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#committee">Committee</a></li>
                     <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
-                    <li class="nav-item"><a class="nav-link" href="stories.html">Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#committee">Committee</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#stories">Stories</a></li>
                     <li class="nav-item"><a class="nav-link" href="#photos">Photos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
                     <li class="nav-item"><a class="nav-link" href="#newsletter">Newsletter</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -550,6 +577,52 @@
         </div>
     </section>
 
+    <!-- News Section -->
+    <section id="news" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Latest Updates</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="news-item">
+                        <h4><i class="fas fa-bullhorn text-primary me-2"></i>New Committee Members Appointed</h4>
+                        <p class="text-muted mb-2"><i class="fas fa-calendar me-1"></i>August 8, 2025</p>
+                        <p>We are pleased to announce that four new nominations were approved during our last AGM. The new office bearers for 2025-26 have been finalized after our committee meeting on August 8th.</p>
+                        <p class="mb-0">Looking forward to more engaging Alumni connects in the coming year. Please feel free to convey your ideas, suggestions, and feedback to us.</p>
+                    </div>
+                    
+                    <div class="news-item">
+                        <h4><i class="fas fa-users text-success me-2"></i>Volunteers Recruitment Update</h4>
+                        <p class="text-muted mb-2"><i class="fas fa-calendar me-1"></i>Recent</p>
+                        <p>We're excited to announce that several alumni have agreed to volunteer for our upcoming events:</p>
+                        <ul class="mb-0">
+                            <li>Rishav</li>
+                            <li>Aryan Singh</li>
+                            <li>Himansu</li>
+                            <li>Santokh Singh (Provisional)</li>
+                            <li>Anubhav</li>
+                            <li>Chaudhary</li>
+                            <li>Chandan Sharma</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><i class="fas fa-info-circle me-2"></i>Quick Info</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Next Meeting:</strong> TBA</p>
+                            <p><strong>Members:</strong> 100+ Active Alumni</p>
+                            <p><strong>Established:</strong> Bengaluru Chapter</p>
+                            <p class="mb-0"><strong>Contact:</strong> Secretary - Sanjib Ghosh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Committee Section -->
     <section id="committee" class="py-5 bg-light">
         <div class="container">
@@ -669,48 +742,157 @@
         </div>
     </section>
 
-    <!-- News Section -->
-    <section id="news" class="py-5">
+    <!-- Alumni Stories Section -->
+    <section id="stories" class="py-5">
         <div class="container">
-            <h2 class="section-title">Latest Updates</h2>
+            <h2 class="section-title">Alumni Stories</h2>
+            <p class="text-center text-muted mb-5">Memories, experiences, and inspiring journeys from our beloved ISM alumni community</p>
+            
             <div class="row">
-                <div class="col-lg-8">
-                    <div class="news-item">
-                        <h4><i class="fas fa-bullhorn text-primary me-2"></i>New Committee Members Appointed</h4>
-                        <p class="text-muted mb-2"><i class="fas fa-calendar me-1"></i>August 8, 2025</p>
-                        <p>We are pleased to announce that four new nominations were approved during our last AGM. The new office bearers for 2025-26 have been finalized after our committee meeting on August 8th.</p>
-                        <p class="mb-0">Looking forward to more engaging Alumni connects in the coming year. Please feel free to convey your ideas, suggestions, and feedback to us.</p>
-                    </div>
-                    
-                    <div class="news-item">
-                        <h4><i class="fas fa-users text-success me-2"></i>Volunteers Recruitment Update</h4>
-                        <p class="text-muted mb-2"><i class="fas fa-calendar me-1"></i>Recent</p>
-                        <p>We're excited to announce that several alumni have agreed to volunteer for our upcoming events:</p>
-                        <ul class="mb-0">
-                            <li>Rishav</li>
-                            <li>Aryan Singh</li>
-                            <li>Himansu</li>
-                            <li>Santokh Singh (Provisional)</li>
-                            <li>Anubhav</li>
-                            <li>Chaudhary</li>
-                            <li>Chandan Sharma</li>
-                        </ul>
+                <div class="col-lg-6 mb-4">
+                    <div class="card story-preview-card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="story-icon me-3">
+                                    <i class="fas fa-book-open text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="card-title mb-1">Down Memory Lane – Initiation</h5>
+                                    <small class="text-muted"><strong>A K Ojha – Class of 1965 (Mining)</strong></small>
+                                </div>
+                            </div>
+                            <p class="card-text">
+                                <em>"Are you enjoying the snow flakes at Simla?"</em>
+                            </p>
+                            <p class="card-text text-muted">
+                                A fascinating account of the first days at ISM in 1961, filled with ragging experiences, the infamous "Simla visit," and how senior students became unexpected saviors...
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>Era: 1961
+                                </small>
+                                <a href="stories.html#story-1" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-arrow-right me-1"></i>Read Story
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="col-lg-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5><i class="fas fa-info-circle me-2"></i>Quick Info</h5>
-                        </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card story-preview-card h-100">
                         <div class="card-body">
-                            <p><strong>Next Meeting:</strong> TBA</p>
-                            <p><strong>Members:</strong> 100+ Active Alumni</p>
-                            <p><strong>Established:</strong> Bengaluru Chapter</p>
-                            <p class="mb-0"><strong>Contact:</strong> Secretary - Sanjib Ghosh</p>
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="story-icon me-3">
+                                    <i class="fas fa-home text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="card-title mb-1">Down Memory Lane – Hostel Life</h5>
+                                    <small class="text-muted"><strong>A K Ojha – Class of 1965 (Mining)</strong></small>
+                                </div>
+                            </div>
+                            <p class="card-text">
+                                <em>"It was an old military warehouse used during the Second World War..."</em>
+                            </p>
+                            <p class="card-text text-muted">
+                                Journey through the legendary Tank-shop Hostel and the colorful characters who made hostel life unforgettable. From evening cacophony competitions to the great sandesh eating challenge...
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>Era: 1961-1965
+                                </small>
+                                <a href="stories.html#story-2" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-arrow-right me-1"></i>Read Story
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-pen text-primary me-2"></i>Share Your ISM Story
+                            </h5>
+                            <p class="card-text text-muted">
+                                Do you have memorable experiences from your ISM days? We'd love to feature your story and preserve these precious memories for future generations.
+                            </p>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <a href="stories.html" class="btn btn-primary">
+                                    <i class="fas fa-book-open me-2"></i>Read All Stories
+                                </a>
+                                <a href="#contact" class="btn btn-outline-primary">
+                                    <i class="fas fa-envelope me-2"></i>Submit Your Story
+                                </a>
+                            </div>
+                            <p class="small text-muted mt-3">
+                                Stories can be about hostel life, academics, friendships, achievements, or any memorable moment from ISM
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="photos" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Photo Gallery</h2>
+            <p class="text-center text-muted mb-5">Capturing memorable moments from our events and gatherings</p>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card photo-gallery-card h-100" onclick="window.open('resources/photos/', '_blank')">
+                        <div class="position-relative">
+                            <img src="resources/photos/ISMAA Meet July 25/SVB_9246.JPG" 
+                                 alt="ISMAA Meet July 2025" 
+                                 class="card-img-top" 
+                                 style="height: 300px; object-fit: cover;">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center photo-overlay"
+                                 style="opacity: 0;"
+                                 onmouseover="this.style.opacity='1'"
+                                 onmouseout="this.style.opacity='0'">
+                                <i class="fas fa-expand text-white" style="font-size: 2rem;"></i>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">ISMAA Meet July 2025</h5>
+                            <p class="card-text text-muted">Latest chapter gathering and fellowship</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card photo-gallery-card h-100" onclick="window.open('resources/photos/', '_blank')">
+                        <div class="position-relative">
+                            <img src="resources/photos/ISMAA Meet July 25/SVB_9425.JPG" 
+                                 alt="ISMAA Meet July 2025" 
+                                 class="card-img-top" 
+                                 style="height: 300px; object-fit: cover;">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center photo-overlay"
+                                 style="opacity: 0;"
+                                 onmouseover="this.style.opacity='1'"
+                                 onmouseout="this.style.opacity='0'">
+                                <i class="fas fa-expand text-white" style="font-size: 2rem;"></i>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Community Bonding</h5>
+                            <p class="card-text text-muted">ISMAA July 2025 meeting moments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="resources/photos/" class="btn btn-custom btn-lg">
+                    <i class="fas fa-images me-2"></i>View Full Gallery
+                </a>
             </div>
         </div>
     </section>
@@ -861,64 +1043,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Photo Gallery Section -->
-    <section id="photos" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Photo Gallery</h2>
-            <p class="text-center text-muted mb-5">Capturing memorable moments from our events and gatherings</p>
-            
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="card photo-gallery-card h-100" onclick="window.open('resources/photos/', '_blank')">
-                        <div class="position-relative">
-                            <img src="resources/photos/ISMAA Meet July 25/SVB_9246.JPG" 
-                                 alt="ISMAA Meet July 2025" 
-                                 class="card-img-top" 
-                                 style="height: 300px; object-fit: cover;">
-                            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center photo-overlay"
-                                 style="opacity: 0;"
-                                 onmouseover="this.style.opacity='1'"
-                                 onmouseout="this.style.opacity='0'">
-                                <i class="fas fa-expand text-white" style="font-size: 2rem;"></i>
-                            </div>
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">ISMAA Meet July 2025</h5>
-                            <p class="card-text text-muted">Latest chapter gathering and fellowship</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6 mb-4">
-                    <div class="card photo-gallery-card h-100" onclick="window.open('resources/photos/', '_blank')">
-                        <div class="position-relative">
-                            <img src="resources/photos/ISMAA Meet July 25/SVB_9425.JPG" 
-                                 alt="ISMAA Meet July 2025" 
-                                 class="card-img-top" 
-                                 style="height: 300px; object-fit: cover;">
-                            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center photo-overlay"
-                                 style="opacity: 0;"
-                                 onmouseover="this.style.opacity='1'"
-                                 onmouseout="this.style.opacity='0'">
-                                <i class="fas fa-expand text-white" style="font-size: 2rem;"></i>
-                            </div>
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Community Bonding</h5>
-                            <p class="card-text text-muted">ISMAA July 2025 meeting moments</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-4">
-                <a href="resources/photos/" class="btn btn-custom btn-lg">
-                    <i class="fas fa-images me-2"></i>View Full Gallery
-                </a>
             </div>
         </div>
     </section>

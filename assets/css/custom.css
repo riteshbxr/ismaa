@@ -18,6 +18,49 @@
     opacity: 0.95;
 }
 
+/* Resource Card Styles */
+.resource-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.resource-card .card-header {
+    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+    border-bottom: 1px solid #dee2e6;
+    padding: 1rem 1.25rem;
+}
+
+.resource-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.resource-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.resource-item:last-child {
+    border-bottom: none;
+}
+
+.resource-actions .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.resource-actions i {
+    font-size: 0.75rem;
+}
+
 /* Photo Gallery Enhancements */
 .photo-gallery-section {
     position: relative;

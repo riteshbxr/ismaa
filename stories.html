@@ -148,7 +148,39 @@
             border-left: 4px solid var(--primary-color);
             padding: 1rem;
             margin: 1.5rem 0;
-            border-radius: 0 8px 8px 0;
+        }
+        
+        /* Audio Story Styles */
+        .audio-story-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border: 2px solid #e8f5e8;
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.1);
+        }
+
+        .audio-story-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(40, 167, 69, 0.15);
+        }
+
+        .audio-player-container {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid #dee2e6;
+        }
+
+        .audio-player-container.enhanced {
+            background: linear-gradient(135deg, #f0f8f0, #f8fff8);
+            border: 2px solid #d4edda;
+        }
+
+        .audio-player-container audio {
+            height: 54px;
+            outline: none;
+        }
+
+        .audio-controls .btn {
+            margin: 0 0.25rem;
         }
         
         .story-section h6 {
@@ -489,6 +521,143 @@
                 </div>
             </div>
 
+            <!-- Audio Story -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card story-card audio-story-card" id="story-3">
+                        <div class="card-header">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h4 class="mb-1"><i class="fas fa-microphone text-success me-2"></i>Audio Memories from ISM</h4>
+                                    <p class="mb-0 text-muted"><strong>Ashok Kumar – 1967 (Mining Engineering)</strong></p>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <span class="badge bg-success">
+                                        <i class="fas fa-volume-up me-1"></i>Audio
+                                    </span>
+                                    <span class="badge bg-primary">Class of 1967</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!-- Summary View -->
+                            <div class="story-summary">
+                                <p class="story-intro"><em>"Listen to heartfelt memories and experiences, including an amusing tale of mistaken identity involving two Ashok Kumars..."</em></p>
+                                <p>A special audio recording featuring stories, memories, and insights from Ashok Kumar, Mining Engineering graduate from the Class of 1967. Discover authentic experiences from the golden era of ISM, including a fascinating story about the confusion between two people named Ashok Kumar that will make you smile.</p>
+                                
+                                <!-- Audio Player in Summary -->
+                                <div class="audio-player-container mt-3 mb-3">
+                                    <audio controls class="w-100" preload="metadata" style="border-radius: 8px;">
+                                        <source src="resources/Audio by Ashok Sir.oga" type="audio/ogg">
+                                        <source src="resources/Audio by Ashok Sir.oga" type="audio/mpeg">
+                                        Your browser does not support the audio element. 
+                                        <a href="resources/Audio by Ashok Sir.oga" download>Download Audio File</a>
+                                    </audio>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <small class="text-muted">
+                                        <i class="fas fa-clock me-1"></i>Class of 1967 - Mining Engineering • 
+                                        <i class="fas fa-microphone me-1"></i>Audio Recording
+                                    </small>
+                                    <div>
+                                        <a href="resources/Audio by Ashok Sir.oga" download class="btn btn-outline-success btn-sm me-2">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </a>
+                                        <button class="btn btn-outline-primary btn-sm me-2" onclick="shareStory('audio-memories')">
+                                            <i class="fas fa-share me-1"></i>Share
+                                        </button>
+                                        <button class="expand-btn btn-sm" onclick="toggleStory('story-3')">
+                                            <i class="fas fa-expand me-1"></i>More Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Full Story View (Hidden by default) -->
+                            <div class="story-full" style="display: none;">
+                                <div class="story-meta mb-4">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p><strong><i class="fas fa-user me-2"></i>Alumni:</strong> Ashok Kumar</p>
+                                            <p><strong><i class="fas fa-graduation-cap me-2"></i>Department:</strong> Mining Engineering</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p><strong><i class="fas fa-calendar me-2"></i>Batch:</strong> Class of 1967</p>
+                                            <p><strong><i class="fas fa-microphone me-2"></i>Format:</strong> Audio Recording</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="story-content">
+                                    <div class="story-section">
+                                        <h5><i class="fas fa-headphones text-success me-2"></i>About This Recording</h5>
+                                        <p>This audio recording captures the authentic voice and memories of Ashok Kumar, a Mining Engineering graduate from the Class of 1967. In his own words, he shares personal anecdotes, experiences, and stories from his time at the Indian School of Mines during the late 1960s.</p>
+                                        
+                                        <div class="story-highlight">
+                                            <h6><i class="fas fa-star text-warning me-2"></i>Highlights from the Recording:</h6>
+                                            <ul>
+                                                <li><strong>The Two Ashoks:</strong> An amusing tale of mistaken identity involving two people named Ashok that led to confusion and laughter</li>
+                                                <li><strong>Campus Life in the 1960s:</strong> Authentic descriptions of student life, hostel experiences, and academic atmosphere</li>
+                                                <li><strong>Mining Department Memories:</strong> Specific recollections from the Mining Engineering department and its unique culture</li>
+                                                <li><strong>Personal Anecdotes:</strong> Heartfelt stories that showcase the human side of the ISM experience</li>
+                                                <li><strong>Historical Context:</strong> Insights into how ISM was evolving during the 1960s era</li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Enhanced Audio Player -->
+                                        <div class="audio-player-container enhanced mt-4 mb-4">
+                                            <h6><i class="fas fa-play-circle text-success me-2"></i>Listen to Ashok Kumar's Memories</h6>
+                                            <audio controls class="w-100" preload="metadata" style="border-radius: 12px;">
+                                                <source src="resources/Audio by Ashok Sir.oga" type="audio/ogg">
+                                                <source src="resources/Audio by Ashok Sir.oga" type="audio/mpeg">
+                                                Your browser does not support the audio element. 
+                                                <a href="resources/Audio by Ashok Sir.oga" download>Download Audio File</a>
+                                            </audio>
+                                            <div class="audio-controls mt-3 text-center">
+                                                <button class="btn btn-success btn-sm me-2" onclick="document.querySelector('#story-3 .enhanced audio').play()">
+                                                    <i class="fas fa-play me-1"></i>Play
+                                                </button>
+                                                <button class="btn btn-warning btn-sm me-2" onclick="document.querySelector('#story-3 .enhanced audio').pause()">
+                                                    <i class="fas fa-pause me-1"></i>Pause
+                                                </button>
+                                                <a href="resources/Audio by Ashok Sir.oga" download class="btn btn-info btn-sm">
+                                                    <i class="fas fa-download me-1"></i>Download Audio
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="story-note">
+                                            <p><strong>Note:</strong> This recording represents the authentic voice of our alumni sharing their personal experiences. The stories and perspectives shared are from the narrator's personal memories and experiences during their time at ISM.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="story-footer mt-4 pt-3 border-top">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <small class="text-muted">
+                                                <i class="fas fa-calendar me-1"></i>Era: 1960s • 
+                                                <i class="fas fa-graduation-cap me-1"></i>Mining Engineering • 
+                                                <i class="fas fa-microphone me-1"></i>Audio Format
+                                            </small>
+                                        </div>
+                                        <div class="col-md-4 text-md-end">
+                                            <button class="btn btn-outline-primary btn-sm me-2" onclick="shareStory('audio-memories')">
+                                                <i class="fas fa-share me-1"></i>Share Story
+                                            </button>
+                                            <button class="collapse-btn btn-sm" onclick="toggleStory('story-3')">
+                                                <i class="fas fa-compress me-1"></i>Collapse
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Call to Action for More Stories -->
             <div class="row mt-4">
                 <div class="col-12">
@@ -567,21 +736,39 @@
 
         // Share Story Function
         function shareStory(storyId) {
-            const url = window.location.href + '#' + storyId;
-            const title = 'Check out this amazing ISM Alumni Story';
+            let url, title, description;
+            
+            if (storyId === 'down-memory-lane') {
+                url = window.location.href + '#story-1';
+                title = 'Alumni Story: Down Memory Lane - Initiation';
+                description = 'Read this fascinating story from an ISM alumni about the initiation days in 1961';
+            } else if (storyId === 'hostel-life-memories') {
+                url = window.location.href + '#story-2';
+                title = 'Alumni Story: Down Memory Lane - Hostel Life';
+                description = 'Discover the colorful hostel life at ISM in the 1960s, from Tank-shop to New Hostel';
+            } else if (storyId === 'audio-memories') {
+                url = window.location.href + '#story-3';
+                title = 'Audio Memories from ISM - Ashok Kumar (Class of 1967)';
+                description = 'Listen to heartfelt memories and experiences, including an amusing tale of mistaken identity involving two Ashoks';
+            } else {
+                url = window.location.href;
+                title = 'ISM Alumni Stories';
+                description = 'Read amazing stories from ISM alumni about their memorable experiences';
+            }
             
             if (navigator.share) {
                 navigator.share({
                     title: title,
-                    text: 'Read this inspiring story from an ISM alumnus',
+                    text: description,
                     url: url
                 }).catch(console.error);
             } else {
                 // Fallback: Copy to clipboard
-                navigator.clipboard.writeText(url).then(() => {
-                    alert('Story link copied to clipboard!');
+                const shareText = `${title} - ${url}`;
+                navigator.clipboard.writeText(shareText).then(() => {
+                    alert('Story link copied to clipboard! Share it with fellow alumni.');
                 }).catch(() => {
-                    alert('Share URL: ' + url);
+                    alert(`Share this story:\n\n${shareText}`);
                 });
             }
         }

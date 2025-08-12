@@ -810,6 +810,60 @@
                 </div>
             </div>
             
+            <!-- Audio Story -->
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card story-preview-card audio-story-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="story-icon me-3">
+                                    <i class="fas fa-microphone text-success"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="card-title mb-1">Audio Memories from ISM</h5>
+                                    <small class="text-muted"><strong>Ashok Kumar – Class of 1967 (Mining Engineering)</strong></small>
+                                </div>
+                                <div class="audio-badge">
+                                    <span class="badge bg-success">
+                                        <i class="fas fa-volume-up me-1"></i>Audio
+                                    </span>
+                                </div>
+                            </div>
+                            <p class="card-text">
+                                <em>"Listen to heartfelt memories and experiences, including an amusing tale of mistaken identity involving two Ashok Kumars..."</em>
+                            </p>
+                            <p class="card-text text-muted">
+                                A special audio recording featuring stories, memories, and insights from Ashok Kumar, Mining Engineering graduate from the Class of 1967. Discover authentic experiences from the golden era of ISM, including a fascinating story about the confusion between two people named Ashok Kumar that will make you smile.
+                            </p>
+                            
+                            <!-- Audio Player -->
+                            <div class="audio-player-container mt-3 mb-3">
+                                <audio controls class="w-100" preload="metadata" style="border-radius: 8px;">
+                                    <source src="resources/Audio by Ashok Sir.oga" type="audio/ogg">
+                                    <source src="resources/Audio by Ashok Sir.oga" type="audio/mpeg">
+                                    Your browser does not support the audio element. 
+                                    <a href="resources/Audio by Ashok Sir.oga" download>Download Audio File</a>
+                                </audio>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-clock me-1"></i>Class of 1967 - Mining Engineering
+                                </small>
+                                <div>
+                                    <a href="resources/Audio by Ashok Sir.oga" download class="btn btn-outline-success btn-sm me-2">
+                                        <i class="fas fa-download me-1"></i>Download
+                                    </a>
+                                    <button class="btn btn-outline-primary btn-sm" onclick="document.querySelector('.audio-player-container audio').play()">
+                                        <i class="fas fa-play me-1"></i>Play Audio
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Call to Action -->
             <div class="row mt-4">
                 <div class="col-12">

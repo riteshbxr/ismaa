@@ -444,3 +444,52 @@
         filter: none !important;
     }
 }
+
+/* Audio Story Styles */
+.audio-story-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border: 2px solid #e8f5e8;
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.1);
+}
+
+.audio-story-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(40, 167, 69, 0.15);
+}
+
+.audio-badge {
+    position: relative;
+    top: -5px;
+}
+
+.audio-player-container {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+}
+
+.audio-player-container audio {
+    height: 54px;
+    outline: none;
+}
+
+.audio-player-container audio::-webkit-media-controls-panel {
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.audio-player-container audio::-webkit-media-controls-play-button {
+    background-color: #28a745;
+    border-radius: 50%;
+}
+
+/* Story Icon Animation */
+.story-icon i {
+    transition: all 0.3s ease;
+}
+
+.audio-story-card:hover .story-icon i {
+    transform: scale(1.1);
+    color: #28a745 !important;
+}

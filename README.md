@@ -23,7 +23,7 @@ This website serves as the central hub for ISM alumni in Bengaluru, providing in
 ### ℹ️ About Section
 - Official ISM logo with gear design (established 1926)
 - Information about Indian School of Mines (IIT ISM), Dhanbad
-- Sanskrit motto: "अतिष्ठ जागत प्राप्त वरान्निबोधत" (Rise, Awake and Achieve Excellence)
+- Sanskrit motto: "उत्तिष्ठ जाग्रत प्राप्य वरान्निबोधत" (Arise! Awake! and stop not until the goal is reached.)
 - Institute history and achievements spanning 99+ years
 - Mission and vision statements
 - Overview of ISMAA Bengaluru Chapter
